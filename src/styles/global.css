@@ -1,18 +1,27 @@
-body {
+/* body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #ffffff;
     color: #BA2027;
     padding: 0 5%;
-  }
+  } */
   
-  .navbar {
+  /* .navbar {
 
     display: flex;
     justify-content: space-between;
     padding: 1rem;
     background: white;
-    /* border-bottom: #424E53 1px solid; */
+    border-bottom: #424E53 1px solid;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    position: relative;
   }
   
   .navbar ul {
@@ -25,9 +34,9 @@ body {
     text-decoration: none;
     font-size: 20px;
     color: #BA2027;
-  }
+  } */
   
-  .hero {
+  /* .hero {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -40,7 +49,7 @@ body {
   .hero-text p{
     color: #424E53;
     font-size: 25px;
-  }
+  } 
   .highlight {
     color: #BA2027;
   }
@@ -100,8 +109,8 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-    .navbar {
+@media (max-width: 768px) { */
+    /* .navbar {
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -111,9 +120,9 @@ body {
         flex-direction: column;
         gap: 15px;
         padding-top: 10px;
-    }
+    } */
 
-    .hero-text {
+    /* .hero-text {
         max-width: 100%;
     }
 
@@ -164,5 +173,5 @@ body {
     .hero-image {
         max-width: 100%;
     }
-}
+} */
   
