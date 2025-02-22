@@ -45,7 +45,7 @@ const Home = () => {
         </div>
       </div>
       <div className="mt-8 lg:mt-0 flex justify-center">
-        <img src={profilePic} alt="John Parker" className="w-full max-w-3xl rounded-4xl shadow-lg" />
+        <img src={profilePic} alt="John Parker" className="w-full max-w-3xl rounded-4xl rounded-bl-[200px] shadow-lg" />
       </div>
     </div>
   );
