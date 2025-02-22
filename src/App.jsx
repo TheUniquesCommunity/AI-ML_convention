@@ -15,22 +15,23 @@ import FeaturesSection from "./components/ksitij";
 
 function App() {
   return (
-    <div>
+    <div >
       <Navbar />
-      
-      
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/case-studies" element={<CaseStudies />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/cards" element={<Cards />} />
-      </Routes>
-      <ServicesSection/>
-      <Hero/>
-      <ConsultingSection/>
-      <AnimatedTechStack/>
-      <FeaturesSection/>
+
+      <div className="container mx-auto">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/cards" element={<Cards />} />
+        </Routes>
+        <ServicesSection />
+      </div>
+      <Hero />
+      <ConsultingSection />
+      <AnimatedTechStack />
+      <FeaturesSection />
 
     </div>
 
