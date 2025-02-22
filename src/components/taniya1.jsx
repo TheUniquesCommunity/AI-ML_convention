@@ -8,7 +8,6 @@ const services = [
       "Mauris sollicitudin fermentum libero. Vivamus aliquet elit ac nisl. In hac habitasse platea dictumst.",
     icon: "\u003C/\u003E",
     bgColor: "bg-red-500",
-    color: "white",
     rotated: true,
   },
   {
@@ -62,8 +61,8 @@ const ServicesSection = () => {
             }`}
           >
             <div className="text-3xl">{service.icon}</div>
-            <h2 className="text-2xl font-bold mt-2">{service.title}</h2>
-            <p className="text-gray-700 mt-2">{service.description}</p>
+            <h2 className="text-2xl font-bold mt-2 text-white">{service.title}</h2>
+            <p className="text-white mt-2">{service.description}</p>
             <a href="#" className="mt-4 inline-block text-white font-bold">
               Read more
             </a>
