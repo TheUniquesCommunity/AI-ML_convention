@@ -1,5 +1,5 @@
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import React from "react";
+// import React from "react";
 
 const TestimonialSection = () => {
   return (
