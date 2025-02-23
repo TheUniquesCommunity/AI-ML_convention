@@ -1,50 +1,51 @@
 export default function FeaturesSection() {
-    const features = [
-      {
-        title: "Awarded",
-        description: "Recognized excellence in delivering outstanding results.",
-      },
-      {
-        title: "Dedicated",
-        description: "Committed to exceeding expectations with focus on success.",
-      },
-      {
-        title: "Professional",
-        description: "Maintaining the highest standards of service delivery.",
-      },
-      {
-        title: "Experienced",
-        description: "Years of expertise across diverse industries.",
-      },
-      {
-        title: "Experienced",
-        description: "Years of expertise across diverse industries.",
-      },
-      {
-        title: "Experienced",
-        description: "Years of expertise across diverse industries.",
-      },
-      {
-        title: "Experienced",
-        description: "Years of expertise across diverse industries.",
-      },
-      {
-        title: "Experienced",
-        description: "Years of expertise across diverse industries.",
-      },
-    ];
-  
-    return (
-      <div className="min-h-screen w-full flex items-center bg-white p-4 sm:p-8">
-        <div className="max-w-7xl mx-auto w-full">
+  const features = [
+    {
+      title: "Awarded",
+      description: "Recognized excellence in delivering outstanding results.",
+    },
+    {
+      title: "Dedicated",
+      description: "Committed to exceeding expectations with focus on success.",
+    },
+    {
+      title: "Professional",
+      description: "Maintaining the highest standards of service delivery.",
+    },
+    {
+      title: "Experienced",
+      description: "Years of expertise across diverse industries.",
+    },
+    {
+      title: "Experienced",
+      description: "Years of expertise across diverse industries.",
+    },
+    {
+      title: "Experienced",
+      description: "Years of expertise across diverse industries.",
+    },
+    {
+      title: "Experienced",
+      description: "Years of expertise across diverse industries.",
+    },
+    {
+      title: "Experienced",
+      description: "Years of expertise across diverse industries.",
+    },
+  ];
+
+  return (
+    <div className="container mx-auto">
+      <div className="min-h-screen w-full flex items-center bg-white py-4 sm:py-8">
+        <div className="max-w-8xl  w-full">
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="relative space-y-6 text-center lg:text-left">
               <div className="lg:sticky lg:top-30">
-                <h2 className="text-2xl lg:text-4xl font-bold text-[#424E53] leading-tight">
+                <h2 className="text-4xl lg:text-4xl font-semibold text-black ">
                   Transform Your Vision Into
                   <span className="bg-clip-text text-[#BA2027]"> Reality</span>
                 </h2>
-                <p className="text-[#424E53] text-md leading-relaxed mx-auto lg:mx-0 max-w-2xl lg:max-w-none mt-6">
+                <p className="text-[#424E53] leading-relaxed mx-auto lg:mx-0 max-w-2xl text-lg lg:text-xl lg:max-w-none mt-6">
                   We bring together the perfect blend of innovation, expertise, and
                   dedication to help businesses thrive in the digital age. Our
                   proven track record spans across industries, delivering
@@ -90,7 +91,7 @@ export default function FeaturesSection() {
                         <h3 className="font-bold text-3xl text-white mb-2 group-hover:text-[#C8C8C8] transition-colors duration-300">
                           {feature.title}
                         </h3>
-                        <p className="text-white text-sm leading-relaxed">
+                        <p className="text-white text-lg leading-relaxed">
                           {feature.description}
                         </p>
                       </div>
@@ -127,7 +128,7 @@ export default function FeaturesSection() {
                         <h3 className="font-bold text-3xl text-white mb-2 group-hover:text-[#C8C8C8] transition-colors duration-300">
                           {feature.title}
                         </h3>
-                        <p className="text-white text-sm leading-relaxed">
+                        <p className="text-white text-lg leading-relaxed">
                           {feature.description}
                         </p>
                       </div>
@@ -138,5 +139,6 @@ export default function FeaturesSection() {
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
+}

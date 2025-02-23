@@ -27,10 +27,10 @@ import profilePic from "../assets/profile.jpg"; // Add your image in src/assets/
 
 const Home = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-around my-12" >
-      <div className="max-w-lg text-center lg:text-left">
-        <h1 className="text-4xl lg:text-6xl text-gray-700 font-bold">
-          Professional <span className="text-red-600">consulting</span> for your app & software.
+    <div className="flex flex-col lg:flex-row items-center justify-between my-12" >
+      <div className="max-w-2xl text-center lg:text-left">
+        <h1 className="text-4xl lg:text-6xl text-gray-700 leading-[122%] font-bold">
+          Professional <span className="text-red-600">consulting</span> for your app and software.
         </h1>
         <p className="text-gray-600 text-lg lg:text-xl mt-4">
           Hey there! I'm John Parker. Coding consultant focused on coding and deployment solutions.
@@ -45,7 +45,7 @@ const Home = () => {
         </div>
       </div>
       <div className="mt-8 lg:mt-0 flex justify-center">
-        <img src={profilePic} alt="John Parker" className="w-full max-w-sm rounded-lg shadow-lg" />
+        <img src={profilePic} alt="John Parker" className="w-full max-w-3xl rounded-4xl rounded-bl-[200px] shadow-lg" />
       </div>
     </div>
   );

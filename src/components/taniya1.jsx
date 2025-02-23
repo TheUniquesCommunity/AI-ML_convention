@@ -38,13 +38,13 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <div className="min-h-screen bg-white text-black p-10 flex flex-col md:flex-row gap-20">
+    <div className="min-h-screen bg-white py-25 text-black flex flex-col md:flex-row gap-20">
       {/* Left Section (Text) */}
-      <div className="w-full md:w-1/3 pr-8">
-        <h1 className="text-4xl font-bold mb-4">
+      <div className="w-full md:w-3/7 pr-8">
+        <h2 className="text-4xl lg:text-5xl text-gray-700 leading-[122%] font-bold mb-4">
           Things I do for you that simply make your software better.
-        </h1>
-        <p className="text-black mb-6">
+        </h2>
+        <p className="text-gray-600 text-lg lg:text-xl mb-6">
           Vivamus elementum semper nisi. Maecenas ullamcorper, dui et feugiat, eros pede.
         </p>
         <button className="border-2 border-white py-2 px-6 rounded-lg hover:bg-white hover:text-black transition">
@@ -52,13 +52,12 @@ const ServicesSection = () => {
         </button>
       </div>
       {/* Right Section (Service Cards) */}
-      <div className="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="w-full md:w-4/7 grid grid-cols-1 md:grid-cols-2 gap-15 ">
         {services.map((service) => (
           <div
             key={service.id}
-            className={`p-6 rounded-xl ${service.bgColor} text-black shadow-lg relative transition transform ${
-              service.rotated ? "-rotate-6" : ""
-            }`}
+            className={`p-6 rounded-3xl ${service.bgColor} text-black shadow-lg relative transition transform ${service.rotated ? "-rotate-6" : ""
+              }`}
           >
             <div className="text-3xl">{service.icon}</div>
             <h2 className="text-2xl font-bold mt-2 text-white">{service.title}</h2>

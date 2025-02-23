@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <div className="relative h-screen flex items-center justify-center">
       {/* Background Container with both image and gradient */}
-      <div 
+      <div
         style={{
           position: 'absolute',
           top: 0,
@@ -26,27 +26,27 @@ const Hero = () => {
           backgroundRepeat: 'no-repeat'
         }}
       />
-      
+
       {/* Gradient Overlay */}
-      <div 
+      <div
         style={{
           position: 'absolute',
           top: 0,
           left: 0,
           right: 0,
           bottom: 0,
-          background: 'linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0) 100%)'
+          background: `linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 100%)`,
+
 
         }}
       />
 
       {/* Content Container - Adjusted for lower placement */}
-      <div className="relative z-10 h-full flex items-center pt-32">
-        <div className="px-6 lg:px-16 max-w-4xl">
-          <h1 
-            className={`text-4xl lg:text-6xl font-bold text-black leading-tight transition-all duration-1000 ease-out ${
-              isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'
-            }`}
+      <div className="relative z-10 w-full justify-center h-16 flex items-center pt-32">
+        <div className="px-6 lg:px-16 max-w-7xl">
+          <h1
+            className={`text-4xl lg:text-6xl font-semibold text-white leading-tight transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'
+              }`}
           >
             Leveraging the power of <br />
             <span className="text-red-500">code to grow</span> your business
