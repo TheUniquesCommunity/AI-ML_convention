@@ -11,6 +11,9 @@ import Hero from "./components/yashi1";
 import ServicesSection from "./components/taniya1";
 import AnimatedTechStack from "./components/sahil";
 import FeaturesSection from "./components/ksitij";
+// import Footer from "./components/footer";
+import ProcessTimeline from "./components/anamika1";
+import TestimonialSection from "./components/anamika2";
 
 
 function App() {
@@ -27,10 +30,14 @@ function App() {
         <Route path="/cards" element={<Cards />} />
       </Routes>
       <ServicesSection/>
+      <ProcessTimeline/>
+      <TestimonialSection/>
       <Hero/>
       <ConsultingSection/>
+
       <AnimatedTechStack/>
       <FeaturesSection/>
+ 
 
     </div>
 
