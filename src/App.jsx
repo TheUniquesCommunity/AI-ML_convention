@@ -35,7 +35,6 @@ function App() {
       <ConsultingSection />
       <AnimatedTechStack />
       <FeaturesSection />
-
     </div>
 
   );
