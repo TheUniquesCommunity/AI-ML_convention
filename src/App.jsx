@@ -30,6 +30,8 @@ function App() {
           <Route path="/cards" element={<Cards />} />
         </Routes>
         <ServicesSection />
+        <ProcessTimeline />
+        <TestimonialSection />
       </div>
       <Hero />
       <ConsultingSection />
