@@ -23,7 +23,7 @@ const ProcessTimeline = () => {
           { number: "03", title: "Work", text: "Curabitur ullamcorper ultricies nisi." },
           { number: "04", title: "Test & results", text: "Vivamus elementum semper nisi." }
         ].map((step, index) => (
-          <div key={index} className="relative flex flex-col text-4xl items-center text-3xl space-y-5 md:w-1/4 mt-12">
+          <div key={index} className="relative flex flex-col text-4xl items-center space-y-5 md:w-1/4 mt-12">
             {/* Number */}
             <span className="text-black text-6xl md:text-7xl font-bold mt-4 md:mt-6">
             {step.number}
