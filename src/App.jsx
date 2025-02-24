@@ -21,7 +21,7 @@ function App() {
     <div >
       <Navbar />
 
-      <div className="container mx-auto">
+      <div className="container mx-auto px-16">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -32,11 +32,11 @@ function App() {
         <ServicesSection />
         <ProcessTimeline />
         <TestimonialSection />
-      </div>
       <Hero />
       <ConsultingSection />
       <AnimatedTechStack />
       <FeaturesSection />
+      </div>
     </div>
 
   );

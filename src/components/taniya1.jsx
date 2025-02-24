@@ -47,7 +47,7 @@ const ServicesSection = () => {
         <p className="text-gray-600 text-lg lg:text-xl mb-6">
           Vivamus elementum semper nisi. Maecenas ullamcorper, dui et feugiat, eros pede.
         </p>
-        <button className="border-2 border-white py-2 px-6 rounded-lg hover:bg-white hover:text-black transition">
+        <button className="border-2 border-white py-2 px-6 rounded-lg hover:bg-white bg-[#BA2027] text-white hover:text-black transition">
           See all services
         </button>
       </div>

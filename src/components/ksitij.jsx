@@ -35,7 +35,7 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto py-10">
       <div className="min-h-screen w-full flex items-center bg-white py-4 sm:py-8">
         <div className="max-w-8xl  w-full">
           <div className="grid lg:grid-cols-2 gap-12">

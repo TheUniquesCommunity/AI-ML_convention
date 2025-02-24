@@ -11,7 +11,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative h-screen flex items-center justify-center">
+    <div className="relative h-screen flex items-center justify-center ">
       {/* Background Container with both image and gradient */}
       <div
         style={{
