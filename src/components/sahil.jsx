@@ -5,8 +5,16 @@ import { useState, useEffect } from "react";
 
 export default function AnimatedTechStack() {
   const [direction, setDirection] = useState("down");
+  const [images, setImages] = useState([]);
 
   useEffect(() => {
+    // Fetch images from JSON file
+    fetch("/images.json")
+      .then((response) => response.json())
+      .then((data) => setImages(data.hexagons))
+      .catch((error) => console.error("Error loading images:", error));
+
+    // Change direction every 30 seconds
     const interval = setInterval(() => {
       setDirection((prev) => (prev === "down" ? "up" : "down"));
     }, 30000);
@@ -35,9 +43,7 @@ export default function AnimatedTechStack() {
               The best tech stack to scale like crazy
             </p>
             <p className="mt-7 text-[20px] text-gray-800 text-justify">
-              Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-              quis gravida magna mi a libero. Nullam tincidunt adipiscing enim. Sed
-              augue ipsum, egestas nec, vestibulum et.
+            In AI/ML, scalability is crucial. A strong tech stack includes cloud platforms (AWS, GCP), ML frameworks (TensorFlow, PyTorch), and efficient backend solutions (FastAPI, Kubernetes) to handle growing data and real-time processing. With MLOps and serverless computing, AI applications can scale seamlessly, driving innovation.
             </p>
             <button className="mt-9 font-medium text-[18px] px-7 py-3 text-white rounded-lg bg-[#BA2027]">
               Let's talk
@@ -51,7 +57,10 @@ export default function AnimatedTechStack() {
               {[...Array(3)].map((_, i) => (
                 <motion.div
                   key={`left-${i}`}
-                  className="w-[100px] h-[86px] md:w-[140px] md:h-[120px] bg-gray-400 clip-hexagon"
+                  className="w-[100px] h-[86px] md:w-[140px] md:h-[120px] bg-gray-400 rounded-l-xl bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url(${images[i] || "/images/placeholder.jpg"})`,
+                  }}
                   animate="move"
                   variants={getVariants(direction)}
                 />
@@ -63,7 +72,10 @@ export default function AnimatedTechStack() {
               {[...Array(3)].map((_, i) => (
                 <motion.div
                   key={`right-${i}`}
-                  className="w-[100px] h-[86px] md:w-[140px] md:h-[120px] bg-gray-400 clip-hexagon"
+                  className="w-[100px] h-[86px] md:w-[140px] md:h-[120px] bg-gray-400 rounded-tr-xl bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url(${images[i + 3] || "/images/placeholder.jpg"})`,
+                  }}
                   animate="move"
                   variants={getVariants(direction === "down" ? "up" : "down")}
                 />
