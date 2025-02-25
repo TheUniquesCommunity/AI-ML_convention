@@ -18,9 +18,9 @@ const UXProcess = () => {
               <div className="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center mb-4 shadow-[0_0_20px_5px_rgba(255,0,0,0.3)]">
                 <span className="text-4xl font-bold text-white">1</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Planning & Preparation</h3>
+              <h3 className="text-black text-xl font-semibold mb-2">Introduction about the Event</h3>
               <p className="text-sm text-[#424E53]">
-              This phase sets event goals, finalizes themes, secures speakers, and prepares the website.
+               AI/ML conventions explore innovations and trends connecting experts for learning and collaboration.
               </p>
             </div>
 
@@ -29,9 +29,9 @@ const UXProcess = () => {
               <div className="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center mb-4 shadow-[0_0_20px_5px_rgba(255,0,0,0.3)]">
                 <span className="text-4xl font-bold text-white">2</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Marketing & Outreach</h3>
+              <h3 className="text-black text-xl font-semibold mb-2">Speaker Sessions & Panels</h3>
               <p className="text-sm text-[#424E53]">
-              Promotions begin via social media, emails, and collaborations, while registrations and community engagement start.
+              Industry Leaders and innovators share insights on AI/ML trends and developments.
               </p>
             </div>
 
@@ -40,9 +40,9 @@ const UXProcess = () => {
               <div className="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center mb-4 shadow-[0_0_20px_5px_rgba(255,0,0,0.3)]">
                 <span className="text-4xl font-bold text-white">3</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Execution & Event Day</h3>
+              <h3 className=" text-black text-xl font-semibold mb-2">Ideathon Presentation</h3>
               <p className="text-sm text-[#424E53]">
-              Technical setup, live streaming, and speaker coordination are managed, ensuring interactive sessions and audience engagement.    </p>
+              Solve real-world problems through AI/ML- driven project ideas and prortypes</p>
             </div>
 
             {/* Step 4: Visual Design */}
@@ -50,9 +50,9 @@ const UXProcess = () => {
               <div className="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center mb-4 shadow-[0_0_20px_5px_rgba(255,0,0,0.3)]">
                 <span className="text-4xl font-bold text-white">4</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Post-Event Activities</h3>
+              <h3 className="text-black text-xl font-semibold mb-2">Judging & Results</h3>
               <p className="text-sm text-[#424E53]">
-              Event highlights and recordings are shared, feedback is gathered, and networking follow-ups begin.
+              Projects will be evaluated and winners will be announced on date.
               </p>
             </div>
           </div>

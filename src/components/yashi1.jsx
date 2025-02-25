@@ -11,7 +11,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative h-screen flex items-center justify-center">
+    <div className="relative h-[50vh] flex items-center justify-center"> {/* Adjusted height to 50vh */}
       {/* Background Container with both image and gradient */}
       <div
         style={{
@@ -42,7 +42,7 @@ const Hero = () => {
       />
 
       {/* Content Container - Adjusted for lower placement */}
-      <div className="relative z-10 w-full justify-center h-16 flex items-center pt-32">
+      <div className="relative z-10 w-full justify-center h-16 flex items-center pt-16"> {/* Reduced padding for adjusted height */}
         <div className="px-6 lg:px-16 max-w-7xl">
           <h1
             className={`text-4xl lg:text-6xl font-semibold text-white leading-tight transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'

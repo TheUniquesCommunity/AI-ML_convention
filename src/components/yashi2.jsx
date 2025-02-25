@@ -8,7 +8,7 @@ const ConsultingSection = () => {
         <div className="w-full max-w-8xl flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex justify-start items-center w-full max-w-xl md:w-1/2">
             <img
-              src="https://ss2j52z3n7.ufs.sh/f/gYEQWkfpQKNFhr06rNPSQrp94A0Wy7fO1joDasm32LGkKPIS"
+              src="https://cdn.prod.website-files.com/659b714634f8cfe5326a934f/659b9a3ef0e2bb267b38325f_Image%20Combo%20Halves%20Code%20Consult%20Webflow%20Template.webp"
               alt="Consulting"
               className="w-full h-auto rounded-tl-[100px] rounded-tr-[200px] rounded-bl-[50px] shadow-lg"
             />
@@ -17,22 +17,22 @@ const ConsultingSection = () => {
 
           {/* Right Side (Text + Button) */}
           <div className="w-full md:w-1/2 space-y-6">
-            <h2 className="text-4xl font-bold leading-snug">Your one stop to all consulting needs</h2>
+            <h2 className="text-4xl font-bold leading-snug">The Uniques Community</h2>
             <p className="text-lg text-black">
-              In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Praesent congue erat at massa. Vivamus aliquet elit.
+            The Uniques Community is an inclusive platform for innovation, collaboration, and skill development, uniting passionate individuals to create, learn, and grow together.
             </p>
 
             {/* Features List */}
             <div className="space-y-4">
-              <FeatureItem icon={<UsersIcon className="w-6 h-6 text-[#BA2027]" />} text="Trusted by thousands" />
-              <FeatureItem icon={<ShieldCheckIcon className="w-6 h-6 text-[#BA2027]" />} text="Certificate awarded" />
-              <FeatureItem icon={<DocumentTextIcon className="w-6 h-6 text-[#BA2027]" />} text="Weekly reports" />
-              <FeatureItem icon={<CheckCircleIcon className="w-6 h-6 text-[#BA2027]" />} text="Proven track of success" />
+              <FeatureItem icon={<UsersIcon className="w-6 h-6 text-red-500" />} text="Innovation & Creativity " />
+              <FeatureItem icon={<ShieldCheckIcon className="w-6 h-6 text-red-500" />} text=" Collaboration & Networking" />
+              <FeatureItem icon={<DocumentTextIcon className="w-6 h-6 text-red-500" />} text="Skill Development " />
+              <FeatureItem icon={<CheckCircleIcon className="w-6 h-6 text-red-500" />} text="Opportunities & Growth" />
             </div>
 
             {/* Button */}
-            <button className="px-6 py-3 text-lg text-white font-medium bg-[#BA2027] rounded-lg">
-              About me
+            <button className="px-6 py-3 text-lg text-white font-medium bg-red-500 rounded-lg">
+              Join Now
             </button>
           </div>
         </div>

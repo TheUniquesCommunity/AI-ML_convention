@@ -30,10 +30,11 @@ const Home = () => {
     <div className="flex flex-col lg:flex-row items-center justify-between my-12" >
       <div className="max-w-2xl text-center lg:text-left">
         <h1 className="text-4xl lg:text-5xl text-gray-700 leading-[122%] font-bold">
-          Professional <span className="text-red-600">consulting</span> for your app and software.
+        Virtual <span className="text-red-600">AI/ML</span> Convention 2025.
         </h1>
         <p className="text-gray-600 text-lg lg:text-xl mt-4">
-          Hey there! I'm John Parker. Coding consultant focused on coding and deployment solutions.
+        Unlock the potential of AI and ML with industry leaders and visionaries.
+        Collaborate, innovate, and shape the future of technology at the Virtual AI/ML Convention 2025.
         </p>
         <div className="mt-6 flex flex-col lg:flex-row gap-4">
           <button className="bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-700 transition">

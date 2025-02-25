@@ -1,16 +1,33 @@
+import React from 'react';
 import defaultLogo from '../assets/theuniques.jpg'; // Import default logo
 
 const Footer = ({ logo }) => {
   return (
-    <footer className="text-gray-600 body-font  shadow-lg shadow-black">
+    <footer className="text-gray-600 body-font shadow-lg shadow-black">
       <div className="container px-5 py-8 mx-auto flex items-center justify-between">
+        {/* Logo */}
         <a href="/" className="flex title-font font-medium items-center text-gray-900">
-          {logo ? (
-            <img src={logo} alt="Logo" className="h-10" />
-          ) : (
-            <img src={defaultLogo} alt="Default Logo" className="h-10" />
-          )}
+          <img src={logo || defaultLogo} alt="Logo" className="h-10" />
         </a>
+
+        {/* Centered Register Button */}
+        <div className="flex-1 flex justify-center space-x-6">
+  <a 
+    href="/register" 
+    className="shadow-[2px_6px_10px_rgba(0,0,0,0.2)] p-6 bg-white rounded-lg hover:text-red-600 text-black px-6 py-2 text-sm font-normal"
+  >
+    Register
+  </a>
+  <a 
+    href="/register" 
+    className="shadow-[2px_6px_10px_rgba(0,0,0,0.2)] p-6 bg-white rounded-lg hover:text-red-600 text-black px-6 py-2 text-sm font-normal"
+  >
+    Join Uniques Community
+  </a>
+</div>
+
+
+        {/* Social Icons */}
         <span className="inline-flex">
           <a href="https://facebook.com" className="text-gray-500">
             <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
@@ -36,17 +53,11 @@ const Footer = ({ logo }) => {
           </a>
         </span>
       </div>
+
+      {/* Bottom Footer Text */}
       <div className="bg-gray-700 text-white py-4">
         <div className="container mx-auto flex flex-col items-center">
           <p className="text-sm text-white">@ The Uniques Community</p>
-          <a 
-            href="https://twitter.com/knyttneve" 
-            className="text-white" 
-            rel="noopener noreferrer" 
-            target="_blank"
-          >
-          
-          </a>
         </div>
       </div>
     </footer>

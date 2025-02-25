@@ -2,18 +2,21 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import About from "./pages/About";
+// import About from "./pages/About";
 import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";
 import Cards from "./components/cards";
 import ConsultingSection from "./components/yashi2";
 import Hero from "./components/yashi1";
 import ServicesSection from "./components/taniya1";
-import AnimatedTechStack from "./components/sahil";
+import AnimatedSupportTeam from "./components/sahil";
 import FeaturesSection from "./components/ksitij";
 import Footer from "./components/footer";
-import ProcessTimeline from "./components/anamika1";
-import TestimonialSection from "./components/anamika2";
+import UXProcess from "./components/anamika2";
+import TestimonialSection from "./components/anamika1";
+import SpeakersCarousel from "./components/carousel";
+import FAQSection from "./components/faq";
+// import Carousel from "./components/asfa";
 
 
 function App() {
@@ -24,19 +27,25 @@ function App() {
       <div className="container mx-auto px-16">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cards" element={<Cards />} />
         </Routes>
         <ServicesSection />
-        <ProcessTimeline />
+        {/* <ProcessTimeline /> */}
+        <SpeakersCarousel/>
+        
         <TestimonialSection />
+<UXProcess/>
       <Hero />
       <ConsultingSection />
-      <AnimatedTechStack />
-      <FeaturesSection />
       
+      {/* <Carousel /> */}
+      
+      <FeaturesSection />
+      <AnimatedSupportTeam />
+      <FAQSection />
       </div>
       <Footer />
     </div>
