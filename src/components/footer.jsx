@@ -1,47 +1,42 @@
-import React from "react";
-
-const handleScroll = (id) => {
-  const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-};
-
-const NavigationLinks = () => {
-  return (
-    <div className="content">
-      <div className="cE" onClick={() => handleScroll('mission')}>Our Mission</div>
-      <div className="cE" onClick={() => handleScroll('what-we-do')}>What We Do</div>
-      <div className="cE" onClick={() => handleScroll('connecting')}>Connecting Markets & Companies</div>
-      <div className="cE" onClick={() => handleScroll('team')}>Meet Our Team</div>
-    </div>
-  );
-};
-
 const Footer = () => {
   return (
-    <div>
-      <NavigationLinks />
-      <div id="mission">
-        <h2>Our Mission</h2>
-        <p>...</p>
+    <footer className="bg-white text-black body-font w-full border-t border-red-500">
+      <div className="container px-5 py-16 mx-auto">
+        <div className="flex flex-wrap md:text-left text-center order-first">
+          {[...Array(3)].map((_, index) => (
+            <div key={index} className="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 className="title-font font-medium text-[#B21C1C] tracking-widest text-sm mb-3">CATEGORIES</h2>
+              <nav className="list-none mb-6">
+                <li><a className="text-gray-600 hover:text-[#D32F2F]">First Link</a></li>
+                <li><a className="text-gray-600 hover:text-[#D32F2F]">Second Link</a></li>
+                <li><a className="text-gray-600 hover:text-[#D32F2F]">Third Link</a></li>
+                <li><a className="text-gray-600 hover:text-[#D32F2F]">Fourth Link</a></li>
+              </nav>
+            </div>
+          ))}
+          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 className="title-font font-medium text-[#B21C1C] tracking-widest text-sm mb-3">SUBSCRIBE</h2>
+            <div className="flex items-center">
+              <input type="text" placeholder="Your Email" className="w-full bg-gray-100 rounded border border-gray-300 py-2 px-3 text-black outline-none" />
+              <button className="ml-2 bg-[#D32F2F] text-white py-2 px-4 rounded hover:bg-[#B21C1C]">Subscribe</button>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div id="what-we-do">
-        <h2>What We Do</h2>
-        <p>...</p>
+      <div className="border-t border-red-500">
+        <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+          <a className="flex title-font font-medium items-center text-gray-900">
+            <span className="ml-3 text-xl">YourBrand</span>
+          </a>
+          <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2025 YourBrand — All Rights Reserved</p>
+          <span className="inline-flex sm:ml-auto mt-4 sm:mt-0 justify-center sm:justify-start">
+            <a className="text-gray-500 hover:text-[#D32F2F] mx-2">FB</a>
+            <a className="text-gray-500 hover:text-[#D32F2F] mx-2">TW</a>
+            <a className="text-gray-500 hover:text-[#D32F2F] mx-2">IG</a>
+          </span>
+        </div>
       </div>
-
-      <div id="connecting">
-        <h2>Connecting Markets & Companies</h2>
-        <p>...</p>
-      </div>
-
-      <div id="team">
-        <h2>Meet Our Team</h2>
-        <p>...</p>
-      </div>
-    </div>
+    </footer>
   );
 };
 

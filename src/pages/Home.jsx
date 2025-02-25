@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <div className="flex flex-col lg:flex-row items-center justify-between my-12" >
       <div className="max-w-2xl text-center lg:text-left">
-        <h1 className="text-4xl lg:text-6xl text-gray-700 leading-[122%] font-bold">
+        <h1 className="text-4xl lg:text-5xl text-gray-700 leading-[122%] font-bold">
           Professional <span className="text-red-600">consulting</span> for your app and software.
         </h1>
         <p className="text-gray-600 text-lg lg:text-xl mt-4">

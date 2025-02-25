@@ -11,7 +11,7 @@ import Hero from "./components/yashi1";
 import ServicesSection from "./components/taniya1";
 import AnimatedTechStack from "./components/sahil";
 import FeaturesSection from "./components/ksitij";
-// import Footer from "./components/footer";
+import Footer from "./components/footer";
 import ProcessTimeline from "./components/anamika1";
 import TestimonialSection from "./components/anamika2";
 
@@ -21,7 +21,7 @@ function App() {
     <div >
       <Navbar />
 
-      <div className="container mx-auto px-16">
+      <div className="container mx-auto px-8">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -36,7 +36,9 @@ function App() {
       <ConsultingSection />
       <AnimatedTechStack />
       <FeaturesSection />
+      
       </div>
+      <Footer />
     </div>
 
   );
