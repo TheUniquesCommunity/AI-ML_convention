@@ -1,45 +1,93 @@
-// import React from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
 
-const ProcessTimeline = () => {
+const testimonials = [
+  "https://www.theladders.com/wp-content/uploads/office-meeting-190912.jpg",
+  "https://www.betterup.com/hubfs/Diverse%20Creative%20Business%20Team%20In%20Meeting.jpg",
+  "https://www.betterup.com/hubfs/Business-People-Having-A-Creative-Meeting.jpg#keepProtocol",
+  "https://538underwriting.co.uk/wp-content/uploads/2024/03/AdobeStock_377658540-scaled.jpeg",
+  "https://website2021-live-e3e78fbbd3cc41f2847799-7c49c59.divio-media.com/filer_public_thumbnails/filer_public/30/eb/30eb9913-5b2a-4ac7-9a8f-51d12bf11392/meeting-moderation.png__1200x630_q90_crop_subject_location-420%2C304_subsampling-2_upscale.png",
+  "https://blog.uwcped.org/wp-content/uploads/2023/02/effective-meeting-blog.jpg",
+];
+
+const TestimonialSection = () => {
+  const [scrollIndex, setScrollIndex] = useState(0);
+  const [itemsPerView, setItemsPerView] = useState(3);
+
+  useEffect(() => {
+    const updateItemsPerView = () => {
+      if (window.innerWidth >= 1024) {
+        setItemsPerView(3);
+      } else if (window.innerWidth >= 768) {
+        setItemsPerView(2);
+      } else {
+        setItemsPerView(1);
+      }
+    };
+
+    updateItemsPerView();
+    window.addEventListener("resize", updateItemsPerView);
+    return () => window.removeEventListener("resize", updateItemsPerView);
+  }, []);
+
+  const totalSlides = testimonials.length - itemsPerView;
+
+  const prevSlide = () => {
+    setScrollIndex((prev) => Math.max(prev - 1, 0));
+  };
+
+  const nextSlide = () => {
+    setScrollIndex((prev) => Math.min(prev + 1, totalSlides));
+  };
+
   return (
-    <div className="bg-white text-black min-h-screen flex flex-col items-center pt-20 px-4">
-      {/* Title and Subtitle */}
-<div className="mt-20 md:mt-30 text-center">
-  <h2 className="text-3xl font-bold md:text-4xl">Proven process for success</h2>
-  <p className="text-sm mt-4 md:text-base">We help you on every step of the journey</p>
-</div>
+    <div className="text-white py-16 px-8 flex flex-col items-center max-w-7xl mx-auto text-center">
+      {/* Heading */}
+      <h2 className="text-black text-4xl md:text-6xl font-semibold mb-8">
+        Don’t just take my word for it
+      </h2>
 
+      {/* Image Slider Row */}
+      <div className="relative w-full max-w-5xl flex items-center overflow-hidden">
+        {/* Navigation Buttons */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 md:left-6 w-14 md:w-16 h-14 md:h-16 flex items-center justify-center bg-red-500 text-white rounded-full shadow-lg z-10 disabled:opacity-50"
+          disabled={scrollIndex === 0}
+        >
+          <FaChevronLeft size={30} />
+        </button>
 
-      {/* Timeline */}
-      <div className="relative w-4/5 flex flex-col md:flex-row justify-between items-center mt-5">
-        {/* Timeline Line */}
-<div className="hidden md:block absolute top-[65%] left-1/2 -translate-x-1/2 w-full h-[2px] bg-black"></div>
-
-
-        {/* Steps */}
-        {[
-          { number: "01", title: "Contact me", text: "Donec sodales sagittis magna.Cras dapibus. " },
-          { number: "02", title: "Research", text: "Praesent ut ligula non mi varius sagittis." },
-          { number: "03", title: "Work", text: "Curabitur ullamcorper ultricies nisi." },
-          { number: "04", title: "Test & results", text: "Vivamus elementum semper nisi." }
-        ].map((step, index) => (
-          <div key={index} className="relative flex flex-col text-4xl items-center space-y-5 md:w-1/4 mt-12">
-            {/* Number */}
-            <span className="text-black text-6xl md:text-7xl font-bold mt-4 md:mt-6">
-            {step.number}
-            </span>
-
-            {/* Dot */}
-            <div className="w-4 h-4 bg-blue-500 rounded-full md:block hidden"></div>
-
-            {/* Step Title & Description */}
-            <h3 className="text-lg font-bold mt-4">{step.title}</h3>
-            <p className="text-sm max-w-xs">{step.text}</p>
+        <div className="w-full overflow-hidden">
+          <div
+            className="flex transition-transform duration-500"
+            style={{ transform: `translateX(-${scrollIndex * (100 / itemsPerView)}%)` }}
+          >
+            {testimonials.map((image, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-2"
+              >
+                <img
+                  src={image}
+                  alt={`Testimonial ${index + 1}`}
+                  className="w-full h-[300px] md:h-[350px] object-cover rounded-xl"
+                />
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 md:right-6 w-14 md:w-16 h-14 md:h-16 flex items-center justify-center bg-red-500 text-white rounded-full shadow-lg z-10 disabled:opacity-50"
+          disabled={scrollIndex === totalSlides}
+        >
+          <FaChevronRight size={30} />
+        </button>
       </div>
     </div>
   );
 };
 
-export default ProcessTimeline;
+export default TestimonialSection;

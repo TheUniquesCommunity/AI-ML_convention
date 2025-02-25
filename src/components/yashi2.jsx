@@ -4,14 +4,13 @@ import { CheckCircleIcon, UsersIcon, DocumentTextIcon, ShieldCheckIcon } from "@
 const ConsultingSection = () => {
   return (
     <div className="container mx-auto">
-      <div className="w-full min-h-screen flex items-center justify-center bg-[#ffffff] text-black ">
+      <div className="w-full min-h-screen flex items-center justify-center bg-[#ffffff] text-black">
         <div className="w-full max-w-8xl flex flex-col md:flex-row items-center justify-between gap-8">
-
           <div className="flex justify-start items-center w-full max-w-xl md:w-1/2">
             <img
               src="https://ss2j52z3n7.ufs.sh/f/gYEQWkfpQKNFhr06rNPSQrp94A0Wy7fO1joDasm32LGkKPIS"
               alt="Consulting"
-              className="w-full h-auto rounded-tr-[200px] shadow-lg"
+              className="w-full h-auto rounded-tl-[100px] rounded-tr-[200px] rounded-bl-[50px] shadow-lg"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#1ffffff] via-transparent to-transparent rounded-lg"></div>
           </div>
@@ -32,7 +31,7 @@ const ConsultingSection = () => {
             </div>
 
             {/* Button */}
-            <button className="px-6 py-3 text-lg font-medium bg-[#BA2027] rounded-lg">
+            <button className="px-6 py-3 text-lg text-white font-medium bg-[#BA2027] rounded-lg">
               About me
             </button>
           </div>

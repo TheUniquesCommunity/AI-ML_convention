@@ -16,7 +16,7 @@ const services = [
     description:
       "Mauris sollicitudin fermentum libero. Vivamus aliquet elit ac nisl. In hac habitasse platea dictumst.",
     icon: "🔄",
-    bgColor: "bg-black",
+    bgColor: "bg-gray-500",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const services = [
     description:
       "Mauris sollicitudin fermentum libero. Vivamus aliquet elit ac nisl. In hac habitasse platea dictumst.",
     icon: "👥",
-    bgColor: "bg-black",
+    bgColor: "bg-gray-500",
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const services = [
     description:
       "Mauris sollicitudin fermentum libero. Vivamus aliquet elit ac nisl. In hac habitasse platea dictumst.",
     icon: "📝",
-    bgColor: "bg-black",
+    bgColor: "bg-gray-500",
   },
 ];
 
