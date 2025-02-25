@@ -21,7 +21,7 @@ function App() {
     <div >
       <Navbar />
 
-      <div className="container mx-auto px-8">
+      <div className="container mx-auto px-16">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

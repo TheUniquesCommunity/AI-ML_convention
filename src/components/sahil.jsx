@@ -8,16 +8,15 @@ export default function AnimatedTechStack() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Change direction after a certain period (e.g., 30 seconds)
       setDirection((prev) => (prev === "down" ? "up" : "down"));
-    }, 30000); // Change direction every 30 seconds
+    }, 30000);
 
     return () => clearInterval(interval);
   }, []);
 
   const getVariants = (dir) => ({
     move: {
-      y: dir === "down" ? [0, 100, 0] : [0, -100, 0], // Move in and out
+      y: dir === "down" ? [0, 100, 0] : [0, -100, 0],
       transition: { duration: 4, repeat: Infinity, ease: "easeInOut" },
     },
   });
@@ -35,7 +34,7 @@ export default function AnimatedTechStack() {
             <p className="text-[38px] leading-[50px] font-semibold">
               The best tech stack to scale like crazy
             </p>
-            <p className="mt-7 text-[20px] text-gray-800">
+            <p className="mt-7 text-[20px] text-gray-800 text-justify">
               Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
               quis gravida magna mi a libero. Nullam tincidunt adipiscing enim. Sed
               augue ipsum, egestas nec, vestibulum et.
@@ -45,26 +44,26 @@ export default function AnimatedTechStack() {
             </button>
           </div>
 
-          {/* Right Section - Animated Circles */}
+          {/* Right Section - Animated Hexagons */}
           <div className="w-full md:w-1/2 flex justify-center items-center h-full px-4 py-8 relative">
-            {/* Left Column of Circles */}
+            {/* Left Column of Hexagons */}
             <div className="flex flex-col gap-y-4 mr-4">
               {[...Array(3)].map((_, i) => (
                 <motion.div
                   key={`left-${i}`}
-                  className="w-[100px] h-[100px] md:w-[140px] md:h-[140px] bg-gray-300 rounded-full"
+                  className="w-[100px] h-[86px] md:w-[140px] md:h-[120px] bg-gray-400 clip-hexagon"
                   animate="move"
                   variants={getVariants(direction)}
                 />
               ))}
             </div>
 
-            {/* Right Column of Circles */}
+            {/* Right Column of Hexagons */}
             <div className="flex flex-col gap-y-4 ml-4">
               {[...Array(3)].map((_, i) => (
                 <motion.div
                   key={`right-${i}`}
-                  className="w-[100px] h-[100px] md:w-[140px] md:h-[140px] bg-gray-300 rounded-full"
+                  className="w-[100px] h-[86px] md:w-[140px] md:h-[120px] bg-gray-400 clip-hexagon"
                   animate="move"
                   variants={getVariants(direction === "down" ? "up" : "down")}
                 />
