@@ -1,12 +1,13 @@
 import React from "react";
 import { Mic, PlayCircle, Users, Lightbulb } from "lucide-react";
 
+
 const services = [
   {
     id: 1,
     title: "Speaker Session",
     description: "Experts share insights on AI/ML trends and innovations.",
-    icon: <Mic className="text-white" size={40} />,
+    icon: <Mic className="text-white" size={34} />,
     bgColor: "bg-[#BA2027]",
     rotated: true,
   },
@@ -14,21 +15,21 @@ const services = [
     id: 2,
     title: "Interactive Content",
     description: "Live discussions, reels, and key convention highlights.",
-    icon: <PlayCircle className="text-white" size={40} />,
+    icon: <PlayCircle className="text-white" size={34} />,
     bgColor: "bg-gray-500",
   },
   {
     id: 3,
     title: "Connect",
     description: "Network with professionals, researchers, and students.",
-    icon: <Users className="text-white" size={40} />,
+    icon: <Users className="text-white" size={34} />,
     bgColor: "bg-gray-500",
   },
   {
     id: 4,
     title: "Theme-based Solution",
     description: "Tackle real-world problems with AI/ML projects.",
-    icon: <Lightbulb className="text-white" size={40} />,
+    icon: <Lightbulb className="text-white" size={34} />,
     bgColor: "bg-gray-500",
   },
 ];

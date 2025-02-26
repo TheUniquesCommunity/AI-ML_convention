@@ -84,3 +84,21 @@ const SpeakersCarousel = () => {
 };
 
 export default SpeakersCarousel;
+
+<style jsx>{`
+  /* Custom CSS to make the navigation buttons red */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: red !important;
+  }
+
+  /* Custom CSS to make the pagination dots red */
+  .swiper-pagination-bullet {
+    background-color: red !important;
+  }
+
+  /* Custom CSS to change active dot color */
+  .swiper-pagination-bullet-active {
+    background-color: darkred !important;
+  }
+`}</style>
