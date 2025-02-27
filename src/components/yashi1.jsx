@@ -36,7 +36,8 @@ const Hero = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          background: `linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 100%)`,
+          background: 'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0) 100%)',
+
           borderRadius: '20px', // This will also round the gradient overlay
         }}
       />

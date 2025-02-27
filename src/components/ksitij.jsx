@@ -93,8 +93,8 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <section className="min-w-screen py-16 md:py-24 bg-white ">
-      <div className="container  px-4 sm:px-6 lg:px-8 ">
+    <section className="py-16 md:py-24 bg-white overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           <div className="relative space-y-6 text-center lg:text-left">
             <div className="lg:sticky lg:top-24 lg:pt-4">
@@ -106,20 +106,20 @@ export default function FeaturesSection() {
                 </span>
               </h2>
               <p className="text-[#424E53] leading-relaxed mx-auto lg:mx-0 max-w-2xl text-lg lg:text-xl mt-6">
-              AI is revolutionizing industries, enhancing automation, diagnostics, and creativity. This section covers key advancements, challenges, and ethical considerations shaping its future.
-              <br /> Still Interested?
+                AI is revolutionizing industries, enhancing automation, diagnostics, and creativity. This section covers key advancements, challenges, and ethical considerations shaping its future.
+                <br /> Still Interested?
               </p>
               <button
                 className="mt-8 px-8 py-4 bg-[#BA2027] text-white rounded-xl 
                     font-semibold transition-all duration-300 
-                    hover:shadow-md hover:bg-[#A11B21] hover:shadow-[#da5064]"
+                    hover:shadow-md hover:bg-[#BA2027] hover:shadow-[#da5064]"
               >
                 Register Now
               </button>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mx-auto w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
             <div className="space-y-6">
               {features
                 .filter((_, index) => index % 2 === 0)

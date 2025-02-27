@@ -18,16 +18,16 @@ const ConsultingSection = () => {
           {/* Right Side (Text + Button) */}
           <div className="w-full md:w-1/2 space-y-6">
             <h2 className="text-4xl font-bold leading-snug">The Uniques Community</h2>
-            <p className="text-lg text-black">
+            <p className="text-black text-base mt-4 max-width-2xl">
             The Uniques Community is an inclusive platform for innovation, collaboration, and skill development, uniting passionate individuals to create, learn, and grow together.
             </p>
 
             {/* Features List */}
             <div className="space-y-4">
-              <FeatureItem icon={<UsersIcon className="w-6 h-6 text-[#BA2027]" />} text="Innovation & Creativity " />
-              <FeatureItem icon={<ShieldCheckIcon className="w-6 h-6 text-[#BA2027]" />} text=" Collaboration & Networking" />
-              <FeatureItem icon={<DocumentTextIcon className="w-6 h-6 text-[#BA2027]" />} text="Skill Development " />
-              <FeatureItem icon={<CheckCircleIcon className="w-6 h-6 text-[#BA2027]" />} text="Opportunities & Growth" />
+              <FeatureItem icon={<UsersIcon className="w-6 h-6 text-2xl text-[#BA2027]" />} text="Innovation & Creativity " />
+              <FeatureItem icon={<ShieldCheckIcon className="w-6 h-6 text-2xl text-[#BA2027]" />} text=" Collaboration & Networking" />
+              <FeatureItem icon={<DocumentTextIcon className="w-6 h-6 text-2xl text-[#BA2027]" />} text="Skill Development " />
+              <FeatureItem icon={<CheckCircleIcon className="w-6 h-6 text-2xl text-[#BA2027]" />} text="Opportunities & Growth" />
             </div>
 
             {/* Button */}

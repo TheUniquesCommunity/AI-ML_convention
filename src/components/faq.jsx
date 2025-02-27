@@ -48,7 +48,7 @@ const FaqItem = ({ faq }) => {
 			<div
 				className={`${
 					isOpen ? "block" : "hidden"
-				} p-4 lg:p-6 bg-white shadow dark:shadow-none dark:bg-[#BA2027] rounded-xl`}
+				} p-4 lg:p-6 bg-white border-b-1 border-black dark:bg-[#BA2027] `}
 			>
 				<p className="opacity-50">{faq.answer}</p>
 			</div>
@@ -63,7 +63,7 @@ FaqItem.propTypes = {
 const Faq8 = () => {
 	return (
 		<section className="ezy__faq8 light py-14 md:py-24 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white">
-			<div className="container px-16 md:px-8 lg:px-28">
+			<div className="container ">
 				<div className="grid grid-cols-12 justify-between gap-6">
 					<div className="col-span-12 md:col-span-5">
 						<h2 className="font-bold text-[25px] md:text-[45px] leading-none mb-6">
@@ -75,9 +75,7 @@ const Faq8 = () => {
 							qui.Assumenda non repellendus distinctio nihil dicta sapiente,
 							quibusdam maiores
 						</p>
-						<button className="bg-transparent hover:bg-[#BA2027] border border-[#BA2027] hover:text-white rounded transition mt-6 lg:mt-12 px-7 py-3 text-black">
-							View All FAQ's
-						</button>
+
 					</div>
 					<div className="col-span-12 md:col-span-6 md:col-start-7">
 						{faqList.map((faq, i) => (

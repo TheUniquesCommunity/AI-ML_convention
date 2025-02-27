@@ -10,10 +10,10 @@ import ConsultingSection from "./components/yashi2";
 import Hero from "./components/yashi1";
 import ServicesSection from "./components/taniya1";
 import AnimatedSupportTeam from "./components/sahil";
-// import FeaturesSection from "./components/ksitij";
+import FeaturesSection from "./components/ksitij";
 import Footer from "./components/footer";
-import UXProcess from "./components/anamika2";
-import TestimonialSection from "./components/anamika1";
+import IdeaManagement from "./components/anamika2";
+import UXProcess from "./components/anamika1";
 
 import Faq8 from "./components/faq";
 
@@ -35,13 +35,13 @@ function App() {
         <ServicesSection />
         {/* <ProcessTimeline /> */}
         
-        <TestimonialSection />
-<UXProcess/>
+        <UXProcess />
+<IdeaManagement/>
       <Hero />
       <ConsultingSection />
       
       
-      {/* <FeaturesSection /> */}
+      <FeaturesSection />
       <AnimatedSupportTeam />
       <Faq8 />
       </div>

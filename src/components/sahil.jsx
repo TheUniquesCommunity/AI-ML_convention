@@ -95,7 +95,7 @@ export default function AnimatedSupportTeam() {
           <div className="flex flex-col gap-y-6 mr-4">
             {staffMembers.slice(0, 3).map((staff, i) => (
               <motion.div
-                key={`left-${i}`}
+                key={`right-${i}`}
                 className="relative"
                 animate="move"
                 variants={getVariants(direction)}

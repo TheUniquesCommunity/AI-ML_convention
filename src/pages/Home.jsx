@@ -27,12 +27,12 @@ import profilePic from "../assets/profile.jpg"; // Add your image in src/assets/
 
 const Home = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between my-12" >
-      <div className="max-w-2xl text-center lg:text-left">
+    <div className="flex flex-col lg:flex-row items-center justify-between my-12 gap-10" >
+      <div className="max-w-xl text-center lg:text-left">
         <h1 className="text-4xl lg:text-5xl text-gray-700 leading-[122%] font-bold">
         Virtual <span className="text-[#BA2027]">AI/ML</span> Convention 2025.
         </h1>
-        <p className="text-gray-600 text-lg lg:text-xl mt-4">
+        <p className="text-gray-600 text-base mt-4 max-width-2xl">
         Unlock the potential of AI and ML with industry leaders and visionaries.
         Collaborate, innovate, and shape the future of technology at the Virtual AI/ML Convention 2025.
         </p>
@@ -46,7 +46,7 @@ const Home = () => {
         </div>
       </div>
       <div className="mt-8 lg:mt-0 flex justify-center">
-        <img src={profilePic} alt="John Parker" className="w-full max-w-3xl rounded-4xl rounded-bl-[200px] shadow-lg" />
+        <img src={profilePic} alt="John Parker" className="w-full max-w-[400px] rounded-4xl rounded-bl-[200px] shadow-lg" />
       </div>
     </div>
   );
