@@ -1,51 +1,93 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
-const faqs = [
-  { question: "What is The Uniques?", answer: "The Uniques is a community focused on innovation and collaboration in various fields." },
-  { question: "How does The Uniques work?", answer: "We bring together talented individuals to work on impactful projects and initiatives." },
-  { question: "Do I need experience to join?", answer: "No, we welcome everyone, from beginners to professionals, who are passionate about learning and growing." },
-  { question: "Is there any membership fee?", answer: "No, joining The Uniques is completely free and open to all." },
-  { question: "How can I contribute?", answer: "You can contribute by sharing your skills, collaborating on projects, and participating in events." },
+const faqList = [
+	{
+		isActive: true,
+		question: "What is Easy Frontend?",
+		answer:
+			"When it comes to booking a holiday, we know everyone likes something different - so we've designed our getaways with you in mind. When it comes to booking a holiday, we know everyone likes something different.",
+	},
+	{
+		isActive: false,
+		question: "Who is Easy Frontend for?",
+		answer:
+			"When it comes to booking a holiday, we know everyone likes something different - so we've designed our getaways with you in mind. When it comes to booking a holiday, we know everyone likes something different.",
+	},
+	{
+		isActive: false,
+		question: "How does Easy Frontend work?",
+		answer:
+			"When it comes to booking a holiday, we know everyone likes something different - so we've designed our getaways with you in mind. When it comes to booking a holiday, we know everyone likes something different.",
+	},
+	{
+		isActive: false,
+		question: "How often does your team upload resources?",
+		answer:
+			"When it comes to booking a holiday, we know everyone likes something different - so we've designed our getaways with you in mind. When it comes to booking a holiday, we know everyone likes something different.",
+	},
 ];
 
-const FAQSection = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+const FaqItem = ({ faq }) => {
+	const [isOpen, setIsOpen] = useState(faq.isActive || false);
 
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+	const toggleFaq = () => setIsOpen(!isOpen);
 
-  return (
-    <div className="w-full bg-white py-12 overflow-x-hidden">
-      <div className="max-w-screen-xl mx-auto">
-        {/* Heading */}
-        <h2 className="text-3xl font-bold text-center text-red-500 mb-6">FAQS</h2>
-
-        {/* FAQ List */}
-        <div className="border-t border-gray-300">
-          {faqs.map((faq, index) => (
-            <div key={index} className="border-b border-gray-300">
-              {/* Question */}
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full text-left px-6 py-4 flex justify-between items-center font-medium text-black hover:bg-gray-100 transition"
-              >
-                <span>{faq.question}</span>
-                <span className="text-xl">{openIndex === index ? "−" : "+"}</span>
-              </button>
-
-              {/* Answer */}
-              {openIndex === index && (
-                <div className="bg-red-500 text-red px-6 py-4">
-                  {faq.answer}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+	return (
+		<div className={`${isOpen && "active"} rounded-lg`}>
+			<a
+				href="#!"
+				className="btn p-4 lg:p-6 w-full text-start flex justify-between items-center cursor-pointer"
+				onClick={toggleFaq}
+			>
+				<span>{faq.question}</span>
+				<FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
+			</a>
+			<div
+				className={`${
+					isOpen ? "block" : "hidden"
+				} p-4 lg:p-6 bg-white shadow dark:shadow-none dark:bg-[#BA2027] rounded-xl`}
+			>
+				<p className="opacity-50">{faq.answer}</p>
+			</div>
+		</div>
+	);
 };
 
-export default FAQSection;
+FaqItem.propTypes = {
+	faq: PropTypes.object.isRequired,
+};
+
+const Faq8 = () => {
+	return (
+		<section className="ezy__faq8 light py-14 md:py-24 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white">
+			<div className="container px-16 md:px-8 lg:px-28">
+				<div className="grid grid-cols-12 justify-between gap-6">
+					<div className="col-span-12 md:col-span-5">
+						<h2 className="font-bold text-[25px] md:text-[45px] leading-none mb-6">
+							FAQ
+						</h2>
+						<p className="text-lg opacity-70">
+							Assumenda non repellendus distinctio nihil dicta sapiente,
+							quibusdam maiores, illum at, aliquid blanditiis eligendi
+							qui.Assumenda non repellendus distinctio nihil dicta sapiente,
+							quibusdam maiores
+						</p>
+						<button className="bg-transparent hover:bg-[#BA2027] border border-[#BA2027] hover:text-white rounded transition mt-6 lg:mt-12 px-7 py-3 text-black">
+							View All FAQ's
+						</button>
+					</div>
+					<div className="col-span-12 md:col-span-6 md:col-start-7">
+						{faqList.map((faq, i) => (
+							<FaqItem faq={faq} key={i} />
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+	);
+};
+
+export default Faq8;

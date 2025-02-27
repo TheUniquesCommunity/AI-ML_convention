@@ -15,7 +15,7 @@ const UXProcess = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Step 1: User Journey Map */}
             <div className="flex flex-col items-center text-center relative z-10">
-              <div className="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center mb-4 shadow-[0_0_20px_5px_rgba(255,0,0,0.3)]">
+              <div className="w-16 h-16 rounded-full bg-[#BA2027] flex items-center justify-center mb-4 shadow-[0_0_20px_5px_rgba(255,0,0,0.3)]">
                 <span className="text-4xl font-bold text-white">1</span>
               </div>
               <h3 className="text-black text-xl font-semibold mb-2">Introduction about the Event</h3>
@@ -26,7 +26,7 @@ const UXProcess = () => {
 
             {/* Step 2: Wireframes */}
             <div className="flex flex-col items-center text-center relative z-10">
-              <div className="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center mb-4 shadow-[0_0_20px_5px_rgba(255,0,0,0.3)]">
+              <div className="w-16 h-16 rounded-full bg-[#BA2027] flex items-center justify-center mb-4 shadow-[0_0_20px_5px_rgba(255,0,0,0.3)]">
                 <span className="text-4xl font-bold text-white">2</span>
               </div>
               <h3 className="text-black text-xl font-semibold mb-2">Speaker Sessions & Panels</h3>
@@ -37,7 +37,7 @@ const UXProcess = () => {
 
             {/* Step 3: Clickable Prototype */}
             <div className="flex flex-col items-center text-center relative z-10">
-              <div className="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center mb-4 shadow-[0_0_20px_5px_rgba(255,0,0,0.3)]">
+              <div className="w-16 h-16 rounded-full bg-[#BA2027] flex items-center justify-center mb-4 shadow-[0_0_20px_5px_rgba(255,0,0,0.3)]">
                 <span className="text-4xl font-bold text-white">3</span>
               </div>
               <h3 className=" text-black text-xl font-semibold mb-2">Ideathon Presentation</h3>
@@ -47,7 +47,7 @@ const UXProcess = () => {
 
             {/* Step 4: Visual Design */}
             <div className="flex flex-col items-center text-center relative z-10">
-              <div className="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center mb-4 shadow-[0_0_20px_5px_rgba(255,0,0,0.3)]">
+              <div className="w-16 h-16 rounded-full bg-[#BA2027] flex items-center justify-center mb-4 shadow-[0_0_20px_5px_rgba(255,0,0,0.3)]">
                 <span className="text-4xl font-bold text-white">4</span>
               </div>
               <h3 className="text-black text-xl font-semibold mb-2">Judging & Results</h3>

@@ -45,11 +45,15 @@ const Hero = () => {
       <div className="relative z-10 w-full justify-center h-16 flex items-center pt-16"> {/* Reduced padding for adjusted height */}
         <div className="px-6 lg:px-16 max-w-7xl">
           <h1
-            className={`text-4xl lg:text-6xl font-semibold text-white leading-tight transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'
-              }`}
+            // className={`text-4xl lg:text-6xl font-semibold text-white leading-tight transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'
+            //   }`}
+            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white leading-tight transition-all duration-1000 ease-out ${
+              isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'
+            }`}
+            
           >
             Leveraging the power of <br />
-            <span className="text-red-500">code to grow</span> your business
+            <span className="text-[#BA2027]">code to grow</span> your business
           </h1>
         </div>
       </div>

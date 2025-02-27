@@ -52,7 +52,7 @@ const TestimonialSection = () => {
         {/* Navigation Buttons */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 md:left-6 w-14 md:w-16 h-14 md:h-16 flex items-center justify-center bg-red-500 text-white rounded-full shadow-lg z-10 disabled:opacity-50"
+          className="absolute left-4 md:left-6 w-14 md:w-16 h-14 md:h-16 flex items-center justify-center bg-[#BA2027] text-white rounded-full shadow-lg z-10 disabled:opacity-50"
           disabled={scrollIndex === 0}
         >
           <FaChevronLeft size={30} />
@@ -80,7 +80,7 @@ const TestimonialSection = () => {
 
         <button
           onClick={nextSlide}
-          className="absolute right-4 md:right-6 w-14 md:w-16 h-14 md:h-16 flex items-center justify-center bg-red-500 text-white rounded-full shadow-lg z-10 disabled:opacity-50"
+          className="absolute right-4 md:right-6 w-14 md:w-16 h-14 md:h-16 flex items-center justify-center bg-[#BA2027] text-white rounded-full shadow-lg z-10 disabled:opacity-50"
           disabled={scrollIndex === totalSlides}
         >
           <FaChevronRight size={30} />

@@ -10,13 +10,13 @@ import ConsultingSection from "./components/yashi2";
 import Hero from "./components/yashi1";
 import ServicesSection from "./components/taniya1";
 import AnimatedSupportTeam from "./components/sahil";
-import FeaturesSection from "./components/ksitij";
+// import FeaturesSection from "./components/ksitij";
 import Footer from "./components/footer";
 import UXProcess from "./components/anamika2";
 import TestimonialSection from "./components/anamika1";
-import SpeakersCarousel from "./components/carousel";
-import FAQSection from "./components/faq";
-// import Carousel from "./components/asfa";
+
+import Faq8 from "./components/faq";
+
 
 
 function App() {
@@ -34,18 +34,16 @@ function App() {
         </Routes>
         <ServicesSection />
         {/* <ProcessTimeline /> */}
-        <SpeakersCarousel/>
         
         <TestimonialSection />
 <UXProcess/>
       <Hero />
       <ConsultingSection />
       
-      {/* <Carousel /> */}
       
-      <FeaturesSection />
+      {/* <FeaturesSection /> */}
       <AnimatedSupportTeam />
-      <FAQSection />
+      <Faq8 />
       </div>
       <Footer />
     </div>

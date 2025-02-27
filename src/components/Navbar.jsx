@@ -34,7 +34,7 @@ const Navbar = () => {
           <li><Link to="/about" className="block py-2 px-4 hover:text-blue-500">About</Link></li>
           <li><Link to="/case-studies" className="block py-2 px-4 hover:text-blue-500">Case Studies</Link></li>
           <li><Link to="/contact" className="block py-2 px-4 hover:text-blue-500">Contact</Link></li>
-          <li><button className="bg-red-500 text-white px-4 py-2 rounded-lg mt-2 md:mt-0">Register Now</button></li>
+          <li><button className="bg-[#BA2027] text-white px-4 py-2 rounded-lg mt-2 md:mt-0">Register Now</button></li>
         </ul>
       </div>
     </nav>

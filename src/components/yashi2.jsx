@@ -24,14 +24,14 @@ const ConsultingSection = () => {
 
             {/* Features List */}
             <div className="space-y-4">
-              <FeatureItem icon={<UsersIcon className="w-6 h-6 text-red-500" />} text="Innovation & Creativity " />
-              <FeatureItem icon={<ShieldCheckIcon className="w-6 h-6 text-red-500" />} text=" Collaboration & Networking" />
-              <FeatureItem icon={<DocumentTextIcon className="w-6 h-6 text-red-500" />} text="Skill Development " />
-              <FeatureItem icon={<CheckCircleIcon className="w-6 h-6 text-red-500" />} text="Opportunities & Growth" />
+              <FeatureItem icon={<UsersIcon className="w-6 h-6 text-[#BA2027]" />} text="Innovation & Creativity " />
+              <FeatureItem icon={<ShieldCheckIcon className="w-6 h-6 text-[#BA2027]" />} text=" Collaboration & Networking" />
+              <FeatureItem icon={<DocumentTextIcon className="w-6 h-6 text-[#BA2027]" />} text="Skill Development " />
+              <FeatureItem icon={<CheckCircleIcon className="w-6 h-6 text-[#BA2027]" />} text="Opportunities & Growth" />
             </div>
 
             {/* Button */}
-            <button className="px-6 py-3 text-lg text-white font-medium bg-red-500 rounded-lg">
+            <button className="px-6 py-3 text-lg text-white font-medium bg-[#BA2027] rounded-lg">
               Join Now
             </button>
           </div>
