@@ -1,87 +1,172 @@
-import React, { useState } from "react";
-import { FaUser, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { User, Mail, Phone, Upload } from 'lucide-react';
 
-const RegistrationForm = () => {
+function App() {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    department: ""
+    yourName: '',
+    teamName: '',
+    members: '',
+    email: '',
+    phone: '',
+    file: null
   });
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleFileChange = (e) => {
+    if (e.target.files && e.target.files[0]) {
+      setFormData(prev => ({
+        ...prev,
+        file: e.target.files ? e.target.files[0] : null
+      }));
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
+    console.log('Form submitted:', formData);
+    // Handle form submission logic here
   };
 
   return (
-    <div className="flex min-h-screen  items-center justify-center">
-      <div className="w-3/4 bg-white shadow-lg rounded-lg flex overflow-hidden">
-        {/* Left Section with Icons & Text */}
-        <div className="w-1/3 bg-[#BA2027] flex flex-col justify-center items-start p-20 text-white gap-y-9">
-          <div className="flex items-center space-x-4">
-            <FaUser size={20} />
-            <div>
-              <h3 className="font-bold">User Registration</h3>
-              <p className="text-sm">Sign up to get started.</p>
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4 pt-16">
+      <div className="w-full max-w-5xl flex rounded-lg overflow-hidden shadow-xl">
+        {/* Left side content */}
+        <div className="bg-[#a01c1c] text-white p-8 w-2/5 flex items-center">
+          <div className="space-y-8 mx-auto">
+            <div className="flex items-start space-x-4">
+              <User className="mt-1" size={24} />
+              <div>
+                <h3 className="text-xl font-bold">User Registration</h3>
+                <p>Sign up to get started.</p>
+              </div>
             </div>
-          </div>
-          <div className="flex items-center space-x-4">
-            <FaEnvelope size={20} />
-            <div>
-              <h3 className="font-bold">Email Access</h3>
-              <p className="text-sm">Provide a valid email.</p>
+            
+            <div className="flex items-start space-x-4">
+              <Mail className="mt-1" size={24} />
+              <div>
+                <h3 className="text-xl font-bold">Email Access</h3>
+                <p>Provide a valid email.</p>
+              </div>
             </div>
-          </div>
-          <div className="flex items-center space-x-4">
-            <FaPhoneAlt size={20} />
-            <div>
-              <h3 className="font-bold">Contact Info</h3>
-              <p className="text-sm">Enter your phone number.</p>
+            
+            <div className="flex items-start space-x-4">
+              <Phone className="mt-1" size={24} />
+              <div>
+                <h3 className="text-xl font-bold">Contact Info</h3>
+                <p>Enter your phone number.</p>
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold mb-4">Why Register?</h2>
+              <ul className="space-y-2">
+                <li>• Access exclusive team resources and materials</li>
+                <li>• Receive important updates about events and deadlines</li>
+                <li>• Connect with other participants and organizers</li>
+                <li>• Track your team's progress throughout the competition</li>
+                <li>• Qualify for certificates and recognition</li>
+              </ul>
             </div>
           </div>
         </div>
-
-        {/* Right Section with Form */}
-        <div className="w-2/3 p-10 flex items-center justify-center">
-          <form onSubmit={handleSubmit} className="w-full">
-            <h2 className="text-2xl font-bold mb-4 text-center">Registeration Form</h2>
-
-            <div className="mb-4">
-              <label className="block text-[#BA2027]">Name</label>
-              <input type="text" name="name" value={formData.name} onChange={handleChange} className="w-full px-3 py-2 border rounded-lg bg-gray-100" required />
+        
+        {/* Right side form */}
+        <div className="bg-white p-8 w-3/5 flex items-center">
+          <div className="w-full">
+            <div className="mb-6 text-center">
             </div>
-
-            <div className="mb-4">
-              <label className="block text-[#BA2027]">Email</label>
-              <input type="email" name="email" value={formData.email} onChange={handleChange} className="w-full px-3 py-2 border rounded-lg bg-gray-100" required />
-            </div>
-
-            <div className="mb-4">
-              <label className="block text-[#BA2027]">Phone Number</label>
-              <input type="text" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-3 py-2 border rounded-lg bg-gray-100" required />
-            </div>
-
-            <div className="mb-4">
-              <label className="block text-[#BA2027]">Department</label>
-              <input type="text" name="department" value={formData.department} onChange={handleChange} className="w-full px-3 py-2 border rounded-lg bg-gray-100" required />
-            </div>
-
-            <div className="flex justify-center">
-              <Link to="/register">
-                <button type="submit" className="px-4 py-2 bg-[#BA2027] text-white rounded-lg hover:bg-gray-900">Submit</button>
-              </Link>
-            </div>
-          </form>
+            
+            <h1 className="text-center text-2xl font-bold text-[#a01c1c] mb-6">Registration Form</h1>
+            
+            <form onSubmit={handleSubmit}>
+              <div className="space-y-4">
+                <div>
+                  <label htmlFor="yourName" className="block text-gray-700 mb-2">Your Name</label>
+                  <input
+                    type="text"
+                    id="yourName"
+                    name="yourName"
+                    value={formData.yourName}
+                    onChange={handleChange}
+                    className="w-full p-3 bg-gray-100 rounded border-0"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="teamName" className="block text-gray-700 mb-2">Team Name</label>
+                  <input
+                    type="text"
+                    id="teamName"
+                    name="teamName"
+                    value={formData.teamName}
+                    onChange={handleChange}
+                    className="w-full p-3 bg-gray-100 rounded border-0"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="members" className="block text-gray-700 mb-2">Number of Team Members</label>
+                  <input
+                    type="number"
+                    id="members"
+                    name="members"
+                    value={formData.members}
+                    onChange={handleChange}
+                    className="w-full p-3 bg-gray-100 rounded border-0"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="email" className="block text-gray-700 mb-2">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full p-3 bg-gray-100 rounded border-0"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="phone" className="block text-gray-700 mb-2">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full p-3 bg-gray-100 rounded border-0"
+                    required
+                  />
+                </div>
+                
+                <div className="flex justify-center mt-6">
+                  <button
+                    type="submit"
+                    className="bg-[#a01c1c] text-white py-2 px-8 rounded hover:bg-[#8a1818] transition-colors"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
-export default RegistrationForm;
+export default App;
