@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaUser, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -19,10 +20,10 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-gray-100 items-center justify-center">
+    <div className="flex min-h-screen  items-center justify-center">
       <div className="w-3/4 bg-white shadow-lg rounded-lg flex overflow-hidden">
         {/* Left Section with Icons & Text */}
-        <div className="w-1/3 bg-gray-600 flex flex-col justify-center items-start p-20 text-white gap-y-9">
+        <div className="w-1/3 bg-[#BA2027] flex flex-col justify-center items-start p-20 text-white gap-y-9">
           <div className="flex items-center space-x-4">
             <FaUser size={20} />
             <div>
@@ -52,27 +53,29 @@ const RegistrationForm = () => {
             <h2 className="text-2xl font-bold mb-4 text-center">Registeration Form</h2>
 
             <div className="mb-4">
-              <label className="block text-gray-700">Name</label>
+              <label className="block text-[#BA2027]">Name</label>
               <input type="text" name="name" value={formData.name} onChange={handleChange} className="w-full px-3 py-2 border rounded-lg bg-gray-100" required />
             </div>
 
             <div className="mb-4">
-              <label className="block text-gray-700">Email</label>
+              <label className="block text-[#BA2027]">Email</label>
               <input type="email" name="email" value={formData.email} onChange={handleChange} className="w-full px-3 py-2 border rounded-lg bg-gray-100" required />
             </div>
 
             <div className="mb-4">
-              <label className="block text-gray-700">Phone Number</label>
+              <label className="block text-[#BA2027]">Phone Number</label>
               <input type="text" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-3 py-2 border rounded-lg bg-gray-100" required />
             </div>
 
             <div className="mb-4">
-              <label className="block text-gray-700">Department</label>
+              <label className="block text-[#BA2027]">Department</label>
               <input type="text" name="department" value={formData.department} onChange={handleChange} className="w-full px-3 py-2 border rounded-lg bg-gray-100" required />
             </div>
 
             <div className="flex justify-center">
-              <button type="submit" className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-900">Submit</button>
+              <Link to="/register">
+                <button type="submit" className="px-4 py-2 bg-[#BA2027] text-white rounded-lg hover:bg-gray-900">Submit</button>
+              </Link>
             </div>
           </form>
         </div>

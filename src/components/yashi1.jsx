@@ -11,7 +11,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative h-[50vh] flex items-center justify-center"> {/* Adjusted height to 50vh */}
+    <div className="relative h-[50vh] flex items-center justify-center mt-20 mb-20"> {/* Adjusted height to 50vh */}
       {/* Background Container with both image and gradient */}
       <div
         style={{

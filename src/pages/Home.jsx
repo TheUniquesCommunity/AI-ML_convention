@@ -23,11 +23,11 @@
 // export default Home;
 
 
-import profilePic from "../assets/profile.jpg"; // Add your image in src/assets/
+import profilePic from "../assets/undraw_in-the-zone_07y7.png"; // Add your image in src/assets/
 
 const Home = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between my-12 gap-10" >
+    <div className="flex flex-col lg:flex-row items-center justify-between my-12 gap-10 mt-30 mb-20" >
       <div className="max-w-xl text-center lg:text-left">
         <h1 className="text-4xl lg:text-5xl text-gray-700 leading-[122%] font-bold">
         Virtual <span className="text-[#BA2027]">AI/ML</span> Convention 2025.
@@ -46,7 +46,7 @@ const Home = () => {
         </div>
       </div>
       <div className="mt-8 lg:mt-0 flex justify-center">
-        <img src={profilePic} alt="John Parker" className="w-full max-w-[400px] rounded-4xl rounded-bl-[200px] shadow-lg" />
+        <img src={profilePic} alt="John Parker" className="w-full max-w-[400px] rounded-4xl rounded-bl-[100px]" />
       </div>
     </div>
   );

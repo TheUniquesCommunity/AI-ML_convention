@@ -16,21 +16,21 @@ const services = [
     title: "Interactive Content",
     description: "Live discussions, reels, and key convention highlights.",
     icon: <PlayCircle className="text-white" size={34} />,
-    bgColor: "bg-gray-500",
+    bgColor: "bg-black",
   },
   {
     id: 3,
     title: "Connect",
     description: "Network with professionals, researchers, and students.",
     icon: <Users className="text-white" size={34} />,
-    bgColor: "bg-gray-500",
+    bgColor: "bg-black",
   },
   {
     id: 4,
     title: "Real-World Problems",
     description: "Tackle real-world problems with AI/ML projects.",
     icon: <Lightbulb className="text-white" size={34} />,
-    bgColor: "bg-gray-500",
+    bgColor: "bg-black",
   },
 ];
 
@@ -39,7 +39,7 @@ const ServicesSection = () => {
     <div className="min-h-screen bg-white py-20 text-black flex flex-col md:flex-row items-start md:justify-between gap-12 ">
       {/* Left Section (Text) - Starts from the Top Left */}
       <div className="w-full md:w-2/5 flex flex-col justify-start">
-        <h2 className="text-4xl lg:text-5xl text-gray-700 font-bold mb-4 leading-tight">
+        <h2 className="text-4xl lg:text-5xl text-black font-bold mb-4 leading-tight">
           What's in store for you ?
         </h2>
         <p className="text-gray-600 text-base mb-6 leading-relaxed text-justify">

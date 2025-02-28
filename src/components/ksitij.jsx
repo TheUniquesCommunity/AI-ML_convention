@@ -97,7 +97,7 @@ export default function FeaturesSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           <div className="relative space-y-6 text-center lg:text-left">
-            <div className="lg:sticky lg:top-24 lg:pt-4">
+            <div className="md:sticky lg:top-24 lg:pt-4">
               <h2 className="text-4xl lg:text-5xl font-semibold text-black">
                 Exploring AI Frontiers:
                 <span className="bg-clip-text text-[#BA2027]">

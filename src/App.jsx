@@ -14,8 +14,9 @@ import FeaturesSection from "./components/ksitij";
 import Footer from "./components/footer";
 import IdeaManagement from "./components/anamika2";
 import UXProcess from "./components/anamika1";
-
+import RegistrationForm from "./components/register";
 import Faq8 from "./components/faq";
+import TeamMember10 from "./components/speaker"
 
 
 
@@ -27,10 +28,9 @@ function App() {
       <div className="container mx-auto px-16">
         <Routes>
           <Route path="/" element={<Home />} />
-          
-          <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cards" element={<Cards />} />
+          <Route path="/register" element={<RegistrationForm />} />
         </Routes>
         <ServicesSection />
         {/* <ProcessTimeline /> */}
@@ -42,6 +42,7 @@ function App() {
       
       
       <FeaturesSection />
+      <TeamMember10 />
       <AnimatedSupportTeam />
       <Faq8 />
       </div>

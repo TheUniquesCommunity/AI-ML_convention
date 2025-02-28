@@ -1,4 +1,5 @@
 import React from "react";
+import { ClipboardList, ListChecks, UploadCloud, Trophy } from "lucide-react";
 
 const IdeaManagement = () => {
   const features = [
@@ -8,7 +9,7 @@ const IdeaManagement = () => {
         "Hire Problem Solvers Through Case Studies And Ideas Competition",
         "Engage With Bright Campus Talent",
       ],
-      logo: "https://th.bing.com/th/id/OIP.KAfAT5PjBzUC_116686U8QHaHQ?rs=1&pid=ImgDetMain",
+      icon: <ClipboardList className="w-10 h-10 text-red-600" />, // Red clipboard icon
     },
     {
       title: "Choose a Problem Statement",
@@ -16,7 +17,7 @@ const IdeaManagement = () => {
         "Foster Cross-team Collaboration To Solve Critical Business Problems",
         "Foster Creativity And Innovation Among Employees",
       ],
-      logo: "https://static.vecteezy.com/system/resources/previews/026/454/423/original/problem-statement-icon-vector.jpg",
+      icon: <ListChecks className="w-10 h-10 text-red-600" />, // Red checklist icon
     },
     {
       title: "Submit Your Project",
@@ -24,7 +25,7 @@ const IdeaManagement = () => {
         "Find Fresh Ideas From The Crowd To Build Product Prototypes",
         "Hire Experienced Talent: Problem Solvers And Innovators",
       ],
-      logo: "https://img.freepik.com/premium-vector/hand-click-submit-button-hand-pressing-submit-button-vector-illustration_664675-2400.jpg",
+      icon: <UploadCloud className="w-10 h-10 text-red-600" />, // Red upload icon
     },
     {
       title: "Judging & Results Announcement",
@@ -32,20 +33,20 @@ const IdeaManagement = () => {
         "Engage With Prospective Customers To Build Brand Recall",
         "Run Ideation Competitions",
       ],
-      logo: "https://th.bing.com/th/id/OIP.uhun0rz8edL_IPUTlh2wGwHaHT?rs=1&pid=ImgDetMain",
+      icon: <Trophy className="w-10 h-10 text-red-600" />, // Red trophy icon
     },
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-white px-4 py-12">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-white px-4 py-12 mt-20">
       {/* Title Section */}
       <h2 className="text-3xl md:text-4xl font-bold text-[#BA2027] text-center mb-6">
-      How to Join the AI/ML Ideathon?
+        How to Join the AI/ML Ideathon?
       </h2>
-      <p className="text-center text-gray-800 mb-10 font-medium mt-[-10px]">
-    Unleash your creativity and problem-solving skills in the AI/ML Ideathon!  
-    Follow these steps to participate.
-  </p>
+      <p className="text-center text-gray-800 mb-20 font-medium mt-[-10px]">
+        Unleash your creativity and problem-solving skills in the AI/ML Ideathon!  
+        Follow these steps to participate.
+      </p>
 
       {/* Feature Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl w-full">
@@ -54,13 +55,9 @@ const IdeaManagement = () => {
             key={index}
             className="p-6 rounded-xl shadow-md border border-gray-200 bg-white text-center transition transform hover:scale-105 hover:shadow-lg flex flex-col items-center"
           >
-            {/* Circular Logo with Red Border */}
-            <div className="w-20 h-20 border-4 border-black rounded-full flex items-center justify-center mb-4 overflow-hidden">
-              <img
-                src={feature.logo}
-                alt={feature.title}
-                className="w-full h-full object-cover"
-              />
+            {/* Circular Icon with Red Color */}
+            <div className="w-20 h-20 flex items-center justify-center mb-4">
+              {feature.icon}
             </div>
 
             {/* Feature Title */}
@@ -80,11 +77,6 @@ const IdeaManagement = () => {
           </div>
         ))}
       </div>
-
-      {/* CTA Button */}
-      <button className="mt-8 px-6 py-3 bg-[#BA2027] text-white font-semibold rounded-lg transition">
-        LEARN MORE
-      </button>
     </div>
   );
 };

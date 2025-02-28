@@ -1,4 +1,3 @@
-
 "use client"
 
 import { motion } from "framer-motion"
@@ -66,7 +65,7 @@ export default function AnimatedSupportTeam() {
     move: {
       y: dir === "down" ? [0, 100, 0] : [0, -100, 0],
       scale: [1, 1.05, 1],
-      transition: { duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
+      transition: { duration: 4, repeat: Infinity, ease: "easeInOut" },
     },
   })
 
@@ -86,11 +85,11 @@ export default function AnimatedSupportTeam() {
             to help with expertise and care.
           </p>
           <button className="mt-8 text-lg font-medium px-7 py-3 text-white rounded-lg bg-[#BA2027] hover:bg-red-700 transition-all duration-300">
-            Let's Talk
+            Contact Us
           </button>
         </div>
 
-        {/* Right Section - Animated Hexagons */}
+        {/* Right Section - Animated Staff Cards */}
         <div className="w-full md:w-1/2 flex justify-center items-center h-full px-4 py-8 relative mt-10">
           <div className="flex flex-col gap-y-6 mr-4">
             {staffMembers.slice(0, 3).map((staff, i) => (
@@ -111,7 +110,7 @@ export default function AnimatedSupportTeam() {
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="absolute left-full ml-4 top-0 bg-white p-4 rounded-lg shadow-lg z-20 w-64"
+                    className="absolute right-full ml-4 top-0 bg-white p-4 rounded-lg shadow-lg z-20 w-64"
                   >
                     <h3 className="font-bold text-gray-900">{staff.name}</h3>
                     <p className="text-sm text-[#BA2027]">{staff.designation}</p>
@@ -125,7 +124,7 @@ export default function AnimatedSupportTeam() {
           <div className="flex flex-col gap-y-6 ml-4">
             {staffMembers.slice(3, 6).map((staff, i) => (
               <motion.div
-                key={`right-${i}`}
+                key={`left-${i}`}
                 className="relative"
                 animate="move"
                 variants={getVariants(direction === "down" ? "up" : "down")}
@@ -141,7 +140,7 @@ export default function AnimatedSupportTeam() {
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="absolute right-full mr-4 top-0 bg-white p-4 rounded-lg shadow-lg z-20 w-64"
+                    className="absolute left-full mr-4 top-0 bg-white p-4 rounded-lg shadow-lg z-20 w-64"
                   >
                     <h3 className="font-bold text-gray-900">{staff.name}</h3>
                     <p className="text-sm text-[#BA2027]">{staff.designation}</p>
