@@ -61,7 +61,7 @@ import undrawImage from "../assets/undraw.png"; // Correct way to import an imag
 
 const ConsultingSection = () => {
   return (
-    <div className="container mx-auto mt-28">
+    <div className="container mx-auto px-2 mt-28">
       <div className="w-full min-h-screen flex items-center justify-center bg-[#ffffff] text-black">
         <div className="w-full max-w-8xl flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Left Side (Image) */}

@@ -60,7 +60,7 @@ const teamMembers = [
 ];
 
 const TeamMemberItem = ({ member }) => (
-	<div className="bg-white dark:bg-white shadow-xl rounded-xl hover:-translate-y-1 duration-500 h-full p-6 lg:p-8">
+	<div className="bg-white shadow-xl rounded-xl hover:-translate-y-1 duration-500 lg:h-full h-max lg:my-0 md:my-7 sm:my-8 my-16 p-6 lg:p-8">
 		<img
 			src={member.picture}
 			alt={member.fullName}
@@ -105,8 +105,8 @@ TeamMemberItem.propTypes = {
 
 const TeamMember10 = () => {
 	return (
-		<section className="ezy__team10 light py-14 md:py-24 bg-white dark:bg-white text-zinc-900 dark:text-gray-700">
-			<div className="container px-4 mx-auto">
+		<section id="speakers" className="ezy__team10 light py-14 md:py-24 bg-white  text-zinc-900">
+			<div className="container px-2 mx-auto">
 				<div className="flex justify-center mb-6 md:mb-12">
 					<div className="max-w-lg text-center">
 						<h2 className="text-3xl leading-none font-bold md:text-[45px] mb-4">
@@ -117,7 +117,7 @@ const TeamMember10 = () => {
 						</p>
 					</div>
 				</div>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center pt-6">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-y-4 md:gap-y-20 gap-y-24 text-center pt-6">
 					{teamMembers.map((member, i) => (
 						<div key={i} className="col-span-1">
 							<TeamMemberItem member={member} />

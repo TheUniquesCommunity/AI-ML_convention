@@ -38,7 +38,7 @@ const IdeaManagement = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-white px-4 py-12 mt-20">
+    <div id="ideathon" className="flex flex-col items-center justify-center min-h-screen bg-white px-4 py-12 mt-20">
       {/* Title Section */}
       <h2 className="text-3xl md:text-4xl font-bold text-[#BA2027] text-center mb-6">
         How to Join the AI/ML Ideathon?
@@ -53,9 +53,12 @@ const IdeaManagement = () => {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="p-6 rounded-xl shadow-md border border-gray-200 bg-white text-center transition transform hover:scale-105 hover:shadow-lg flex flex-col items-center"
+            className="p-6 rounded-xl relative z-10 shadow-md border border-gray-200 bg-white text-center transition transform hover:scale-105 hover:shadow-lg flex flex-col items-center"
           >
             {/* Circular Icon with Red Color */}
+            <div className="absolute top-0 left-0 z-[3] text-9xl font-semibold opacity-5">
+              {"0"+(index+1)}
+            </div>
             <div className="w-20 h-20 flex items-center justify-center mb-4">
               {feature.icon}
             </div>

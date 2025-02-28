@@ -93,8 +93,8 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-white overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
+    <section id="insights" className="py-12 mt-8 md:py-24 bg-white overflow-hidden">
+      <div className="container mx-auto px-3 sm:px-6 lg:px-8 max-w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           <div className="relative space-y-6 text-center lg:text-left">
             <div className="md:sticky lg:top-24 lg:pt-4">

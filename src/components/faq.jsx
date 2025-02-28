@@ -48,9 +48,9 @@ const FaqItem = ({ faq }) => {
 			<div
 				className={`${
 					isOpen ? "block" : "hidden"
-				} p-4 lg:p-6 bg-white border-b-1 border-black dark:bg-[#BA2027] `}
+				} p-4 lg:p-6 bg-white border-b  border-slate-300  `}
 			>
-				<p className="opacity-50">{faq.answer}</p>
+				<p className="opacity-80">{faq.answer}</p>
 			</div>
 		</div>
 	);
@@ -62,7 +62,7 @@ FaqItem.propTypes = {
 
 const Faq8 = () => {
 	return (
-		<section className="ezy__faq8 light py-14 md:py-24 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white">
+		<section id="faqs" className="ezy__faq8 light py-14 md:py-24 px-2 bg-white  text-zinc-900">
 			<div className="container ">
 				<div className="grid grid-cols-12 justify-between gap-6">
 					<div className="col-span-12 md:col-span-5">

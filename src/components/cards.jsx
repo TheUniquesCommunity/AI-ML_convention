@@ -35,7 +35,7 @@ export default function FeaturesSection() {
     ];
   
     return (
-      <div className="min-h-screen w-full flex items-center bg-white p-4 sm:p-8">
+      <div className="cards min-h-screen w-full flex items-center bg-white p-4 sm:p-8">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Left side content - sticky on desktop only */}

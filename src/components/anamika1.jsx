@@ -2,7 +2,7 @@ import React from "react";
 
 const UXProcess = () => {
   return (
-    <div className="text-white py-18 px-4 sm:px-6 lg:px-8 mt-20">
+    <div id="timeline" className="text-white pt-20 pb-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Main Title */}
         <h2 className="text-gray-700 text-5xl font-bold text-center -mt-8 mb-6">Event Timeline</h2>
