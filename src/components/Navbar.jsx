@@ -30,10 +30,10 @@ const Navbar = () => {
         <ul
           className={`md:flex md:items-center md:space-x-6 absolute md:static bg-white md:bg-transparent w-full left-0 top-16 md:w-auto p-4 md:p-0 transition-all duration-300 shadow-md md:shadow-none ${isOpen ? "block" : "hidden"}`}
         >
-          <li><Link to="/" className="block py-2 px-4 hover:text-blue-500">Home</Link></li>
-          <li><Link to="/about" className="block py-2 px-4 hover:text-blue-500">About</Link></li>
+          <li><Link to="/" className="block py-2 px-4 hover:text-[#BA2027]">Home</Link></li>
+          <li><Link to="/about" className="block py-2 px-4 hover:text-[#BA2027]">About</Link></li>
           
-          <li><Link to="/contact" className="block py-2 px-4 hover:text-blue-500">Contact</Link></li>
+          <li><Link to="/contact" className="block py-2 px-4 hover:text-[#BA2027]">Contact</Link></li>
           <li>
             <button className="bg-[#BA2027] text-white px-4 py-2 rounded-lg mt-2 md:mt-0">
               <Link to="/register">Register Now</Link>
