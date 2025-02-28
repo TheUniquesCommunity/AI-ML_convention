@@ -41,6 +41,7 @@ Currently, two official plugins are available:
 │── vite.config.js
 ________________________________________
 🔹 Commands Used in Project
+
 Run the following command:
 npm create vite@latest code-consult-vite --template react
 cd code-consult-vite
